@@ -23,6 +23,7 @@ Django 4.x + DRF (backend API) + Next.js 16 App Router (frontend) + Celery + Red
 ## Technology Stack
 
 ### Backend
+
 | Layer | Technology |
 |-------|------------|
 | **Framework** | Django 4.x + Django REST Framework |
@@ -33,6 +34,7 @@ Django 4.x + DRF (backend API) + Next.js 16 App Router (frontend) + Celery + Red
 | **Infra** | Docker Compose, Gunicorn |
 
 ### Frontend
+
 | Layer | Technology |
 |-------|------------|
 | **Framework** | Next.js 16 App Router |
@@ -88,10 +90,10 @@ celery -A config worker -l info
 
 # Frontend
 cd frontend
-npm install
-npm run dev
-npm run build
-npm test
+bun install
+bun run dev
+bun run build
+bun run test
 ```
 
 ---
@@ -111,6 +113,7 @@ npm test
 ## Consolidation Target (P1)
 
 Receives scraping logic from:
+
 - `Django-Scrapy-Selenium` — Scrapy spiders, Selenium utils, Celery tasks
 - `selenium_webdriver` — Node.js Selenium scripts (rewrite in Python)
 - `comicwise` — Feature overlap (comic reader)
